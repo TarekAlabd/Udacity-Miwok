@@ -10,13 +10,14 @@ import android.widget.ArrayAdapter;
 import java.util.ArrayList;
 
 public class WordAdapter extends ArrayAdapter<Word> {
-    @NonNull
-    @Override
-    public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
-        return super.getView(position, convertView, parent);
-    }
     public WordAdapter(Context context, ArrayList<Word> words){
         super(context,0,words);
     }
+    @NonNull
+    @Override
+    public View getView(int position, View convertView, @NonNull ViewGroup parent) {
+        return convertView;
+    }
+
 
 }
